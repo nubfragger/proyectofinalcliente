@@ -1,0 +1,53 @@
+body{
+	margin: 0;
+	padding: 0;
+  font-family: Arial;
+  background-color: #fffff0;
+  transition: background-color .5s;
+}
+#cuerpo{
+  margin: 4%;
+}
+
+#historia{
+  display: grid;
+  grid-template-columns: 33% 46% 20%;
+}
+* {
+  box-sizing: border-box;
+}
+#historia > #texto {
+  border: 2px solid #ffa94d;
+  border-radius: 5px;
+  background-color: #ffd8a8;
+  padding: 1em;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  text-align: justify;
+}
+#historia > #imagen{
+  border: 2px solid #ffa94d;
+  border-radius: 5px;
+  background-color: #ffd8a8;
+  padding: 1em;
+  margin: 20px;
+}
+img{
+  width: 100%;
+  border-radius: 10px;
+  border: 2px solid #ffa94d;
+}
+#historia > #horario {
+  border: 2px solid #ffa94d;
+  border-radius: 5px;
+  background-color: #ffd8a8;
+  padding: 1em;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  text-align: center;
+}
+hr {
+  border: 5px solid #b35c00;
+  border-radius: 10px;
+  width: 40%;
+}

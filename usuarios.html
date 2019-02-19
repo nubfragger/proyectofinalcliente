@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Usuarios</title>
+	<meta content="text/html; charset=utf-8" http-equiv="content-type" />
+	<meta name="author" content="Nicolas Viñals">
+	<meta name="description" content="Diseño Aplicacion Web : Diseño Web Entorno Cliente">
+	<link rel="shortcut icon" type="image/x-icon" href="imagenes/icono.ico" />
+	<!--ESTILOS BOOTSTRAP-->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+		integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<!--SCRIPTS BOOTSTRAP-->
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+		integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+		crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+		integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+		crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+		integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+		crossorigin="anonymous"></script>
+	<!--ICONOS-->
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css"
+		integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<!--ESTILOS-->
+	<link rel="stylesheet" type="text/css" href="./css/header.css" />
+	<link rel="stylesheet" type="text/css" href="./css/cusuarios.css" />
+	<!--SCRIPTS-->
+	<script type="text/javascript" src="./js/usuarios.js"></script>
+	<script type="text/javascript" src="./js/footer.js"></script>
+</head>
+
+<body onload="obtenerdatosjson()">
+	<header>
+		<div class="card bg-dark text-black">
+			<img src="./imagenes/header.png" class="card-img h-50%" alt="...">
+			<div class="card-img-overlay">
+				<h1 class="card-title text-center font-weight-bold h1">Coffee Ozone</h1>
+			</div>
+		</div>
+		<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01"
+				aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			<div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+				<ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+					<li class="nav-item">
+						<a class="nav-link" href="./inicio.html"><i class="fas fa-home"></i> Inicio</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="./pedidos.html"><i class="fab fa-wpforms"></i> Pedidos</a>
+					</li>
+					<li class="nav-item active">
+						<a class="nav-link" href="./usuarios.html"><i class="fas fa-users"></i> Usuarios</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="./acercade.html"><i class="fas fa-info"></i> Acerca de...</a>
+					</li>
+				</ul>
+			</div>
+		</nav>
+	</header>
+	<div id="cuerpo">
+		<div id="titulo">
+			<h1 style="text-decoration: underline overline blue; text-align: center">
+				Empleados de Coffe Ozone
+			</h1>
+		</div>
+		<div id="content">
+			<form name="formu" id="formu">
+				<div id="selecte" class="text-center">
+					<label>Elige los empleados:</label>
+					<br>
+					<select id="lista" onchange="change(this.value)">
+					</select>
+				</div>
+				<div id="content2" class="row">
+					<div class="col-lg-3 ml-4 mr-0 pl-pr-5">
+						<img src="./imagenes/foto.jpg" class="img-fluid img-thumbnail" id="fotos" name="foto_img">
+					</div>
+					<div class="col-lg-8 ml-0 mr-4">
+						<div id="detalle" class="row">
+						</div>
+					</div>
+				</div>
+			</form>
+		</div>
+	</div>
+	<footer class="footer mt-auto py-3 bg-secondary">
+		<div class="container text-center">
+			<p class="text-white font-weight-bolder" id="footp">
+				Creado por: @Nubfragger
+				<input type="button" class="btn btn-outline-light" name="Infoadicional" value="Informacion adicional"
+					onclick="HolaSoyElFooter()">
+			</p>
+		</div>
+	</footer>
+</body>
+
+</html>

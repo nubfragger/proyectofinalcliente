@@ -1,0 +1,75 @@
+{
+	"Empleados": 
+	[
+		{
+			"Nombre": "Marcos Nicolás",
+            "Apellido": "Viñals Cerdá",
+            "Nacionalidad": "Argentina",
+            "Direccion": "Calle Lerida, Aspe",
+            "Puesto": "Jefe",
+            "Telefono": "665223144",
+            "Fecha_nac": "24-08-1993",
+            "foto":"./imagenes/chico.png"
+		},
+		{
+			"Nombre": "Roberto",
+            "Apellido": "Perez",
+            "Nacionalidad": "Española",
+            "Direccion": "Calle rojo, Alicante",
+            "Puesto": "Programador Web",
+            "Telefono": "654823179",
+            "Fecha_nac": "12-11-1994",
+            "foto":"./imagenes/chico.png"
+		},
+		{
+			"Nombre": "Neo",
+            "Apellido": "Antonia",
+            "Nacionalidad": "Angola",
+            "Direccion": "Calle blanco, Elche",
+            "Puesto": "Sistemas",
+            "Telefono": "632145789",
+            "Fecha_nac": "12-08-1988",
+            "foto":"./imagenes/chica.png"
+        },
+        {
+			"Nombre": "Cristina",
+            "Apellido": "Ulloa Sanchez",
+            "Nacionalidad": "Española",
+            "Direccion": "Calle setas, Alicante",
+            "Puesto": "Arquitecta",
+            "Telefono": "698523147",
+            "Fecha_nac": "15-04-1993",
+            "foto":"./imagenes/chica.png"
+        },
+        {
+			"Nombre": "Daiana",
+            "Apellido": "Natali Juarez",
+            "Nacionalidad": "Argentina",
+            "Direccion": "Calle tierra, Elda",
+            "Puesto": "Relaciones Publicas",
+            "Telefono": "785942136",
+            "Fecha_nac": "07-02-1995",
+            "foto":"./imagenes/chica.png"
+		},
+        {
+			"Nombre": "Eduardo",
+            "Apellido": "Paya Diez",
+            "Nacionalidad": "Española",
+            "Direccion": "Calle amarillo, Aspe",
+            "Puesto": "Administrativo",
+            "Telefono": "753964812",
+            "Fecha_nac": "10-05-1993",
+            "foto":"./imagenes/chico.png"
+		},
+        {
+			"Nombre": "Javier",
+            "Apellido": "Ruiperez",
+            "Nacionalidad": "Española",
+            "Direccion": "Calle rojo, Alicante",
+            "Puesto": "Administrador sistemas",
+            "Telefono": "753694812",
+            "Fecha_nac": "21-06-1991",
+            "foto":"./imagenes/chico.png"
+		}
+	]
+}

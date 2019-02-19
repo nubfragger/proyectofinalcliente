@@ -1,0 +1,56 @@
+{
+    "Menus":
+    [
+        {
+            "Nombre":"Menu Ligero",
+            "Opciones":
+            [
+                    "1/2 tostada jamon y queso + cafe o leche",
+                    "1/2 tostada aceite y tomate + batido",
+                    "1/2 tostada aceite y 1/2 tostada mantequilla",
+                    "Zumo naranja y cafe"
+            ]
+        },
+        {
+            "Nombre":"Menu Medio",
+            "Opciones":
+            [
+                    "1/2 Tostada con tomate y Sandwich de jamón y queso + batido chocolate o fresa y zumo naranja",
+                    "Filete pechuga, patatas fritas + cafe o zumo naranja",
+                    "Bacon, salchichas y patatas fritas + cafe",
+                    "Hamburguesa y patatas + Refrescos"
+            ]
+        },
+        {
+            "Nombre":"Menu especial",
+            "Opciones":
+            [
+                    "2 Tostadas gratinadas de jamón y queso + 2 cafés, zumos de naranja o batidos",
+                    "2 Hamburguesas, 2 patatas fritas + 2 refrescos",
+                    "2 Bocadillos de jamón y queso o tortilla + cerveza, cafe, zumo de naranja",
+                    "Patatas fritas, sandwich de tortilla y hamburguesa pollo y queso + cafes y refresco"
+            ]
+        },
+        {
+            "Nombre":"Menu vegano",
+            "Opciones":
+            [
+                    "sffsfds",
+                    "sfd",
+                    "sfddssf",
+                    "sdfsfddfs"
+            ]
+        },
+        {
+            "Nombre":"Menu celíaco",
+            "Opciones":
+            [
+
+                    "afssaffs",
+                    "fassfaffs",
+                    "faasffsasf",
+                    "afssfasfaf"
+            ]
+        }
+    ]
+}

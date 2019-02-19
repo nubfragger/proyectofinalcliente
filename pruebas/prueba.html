@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script type="text/javascript">
+        function validar() {
+            var clienteval = valcliente();
+            var telval = valtel();
+            if (clienteval && telval) {
+                document.getElementById("VR").disabled = false;
+            } else {
+                document.getElementById("VR").disabled = true;
+            }
+        }
+        function valcliente() {
+            var letras = document.getElementById("cliente").value;
+            var expreg = /(?=.*[A-Za-z])/;
+            if (expreg.test(letras)) {
+                return true;
+            } else {
+                return false;
+            }
+        }
+        function habletras(evento) {
+            var teclanum = evento.keyCode;
+            if (teclanum >= 65 && teclanum <= 90) {
+                return true;
+            } else if (teclanum == 32 || teclanum == 8) {
+                return true;
+            } else {
+                return false;
+            }
+        }
+        function valtel() {
+            var telefono = document.getElementById("phone").value;
+            var expreg = /(?=.*\d)/;
+            if (expreg.test(telefono)) {
+                return true;
+            } else {
+                return false;
+            }
+        }
+        function habnum(evento) {
+            var teclanum = evento.keyCode;
+            if (teclanum >= 96 && teclanum <= 105 || teclanum >= 48 && teclanum <= 57) {
+                return true;
+            } else if (teclanum == 32 || teclanum == 8) {
+                return true;
+            } else {
+                return false;
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <form action="">
+        <input type="text" id="cliente" onblur="validar()" onkeydown="return habletras(event)">
+        <input type="tel" id="phone" onblur="validar()" onkeydown="return habnum(event)">
+        <input type="button" id="VR" value="Ver resumen" disabled>
+    </form>
+</body>
+
+</html>

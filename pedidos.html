@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Productos</title>
+	<meta content="text/html; charset=utf-8" http-equiv="content-type" />
+	<meta name="author" content="Nicolas Viñals">
+	<meta name="description" content="Diseño Aplicacion Web : Diseño Web Entorno Cliente">
+	<link rel="shortcut icon" type="image/x-icon" href="imagenes/icono.ico" />
+	<!--ESTILOS BOOTSTRAP-->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+	 crossorigin="anonymous">
+	<!--SCRIPTS BOOTSTRAP-->
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+	 crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+	 crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+	 crossorigin="anonymous"></script>
+	<!--ICONOS-->
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ"
+	 crossorigin="anonymous">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<!--ESTILOS-->
+	<link rel="stylesheet" type="text/css" href="./css/header.css" />
+	<link rel="stylesheet" type="text/css" href="./css/cpedidos.css" />
+	<!--SCRIPTS-->
+	<script type="text/javascript" src="./js/pedido.js"></script>
+	<script type="text/javascript" src="./js/footer.js"></script>
+	<style>
+		#snackbar.show {
+			visibility: visible;
+			-webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+			animation: fadein 0.5s, fadeout 0.5s 2.5s;
+		}
+	</style>
+</head>
+
+<body onload="obtenerdatosjson()">
+	<header>
+		<div class="card bg-dark text-black">
+			<img src="./imagenes/header.png" class="card-img h-50%" alt="...">
+			<div class="card-img-overlay">
+				<h1 class="card-title text-center font-weight-bold h1">Coffee Ozone</h1>
+			</div>
+		</div>
+		<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01"
+			 aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			<div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+				<ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+					<li class="nav-item">
+						<a class="nav-link" href="./inicio.html"><i class="fas fa-home"></i> Inicio</a>
+					</li>
+					<li class="nav-item active">
+						<a class="nav-link" href="./pedidos.html"><i class="fab fa-wpforms"></i> Pedidos</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="./usuarios.html"><i class="fas fa-users"></i> Usuarios</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="./acercade.html"><i class="fas fa-info"></i> Acerca de...</a>
+					</li>
+				</ul>
+			</div>
+		</nav>
+	</header>
+	<div class="cuerpo">
+		<form id="formu">
+			<div>
+				<div id="pedidos" class="">
+					<fieldset id="field" class="border rounded p-2 border-info p-3 row ml-3 mr-3 shadow-lg mb-5 mt-3 bg-white">
+						<legend class="w-auto text-danger" align="center">
+							<h1><i class="fab fa-wpforms"></i> Pedido</h1>
+						</legend>
+						<div id="nomb" class="col-lg-6">
+							<label for="cliente" class="display-block">
+								<i class="fas fa-user"></i> Cliente
+							</label>
+							<input required type="text" class="form-control" id="cliente" name="txtname" onkeydown="return habletras(event)">
+						</div>
+						<div id="telf" class="col-lg-6">
+							<label for="tel" class="display-block">
+								<i class="fa fa-phone"></i> Telefono
+							</label>
+							<input required minlength="9" type="tel" class="form-control" id="tel" name="txttel" onkeydown="return habnum(event)">
+						</div>
+						<div id="feped" class="col-lg-6 mt-4">
+							<label for="fecha_ped" class="display-block">
+								<i class="fa fa-calendar"></i> Fecha de pedido
+							</label>
+							<input required type="date" class="form-control" id="fecha_ped" name="fepedido">
+						</div>
+						<div id="fpago" class="col-lg-6 mt-4">
+							<label for="forpago" class="display-block">
+								<i class="fas fa-euro-sign"></i> Formas de pago
+							</label>
+							<select id="forpago" class="custom-select" name="fpago">
+								<option value="1">Selecciona:</option>
+								<option value="2">Tarjeta de credito</option>
+								<option value="3">Efectivo</option>
+							</select>
+						</div>
+						<div id="selectmenu" class="col-lg-6 mt-4">
+							<label for="selecmenu" class="display-block">
+								<i class="fa fa-cutlery"></i> Menu
+							</label>
+							<select id="selecmenu" class="custom-select" onchange="change(this.value)">
+								<option value="1">Selecciona:</option>
+							</select>
+						</div>
+						<div id="selectmenu2" class="col-lg-6 mt-4">
+							<label for="selecmenu2" class="display-block">
+								<i class="fa fa-coffee"></i> Opciones
+							</label>
+							<select id="selecmenu2" class="custom-select">
+							</select>
+						</div>
+						<div>
+						</div>
+						<div class="text-center col-lg-12 mt-4">
+							<input type="button" id="VPA" value="Ver pedido anterior" class="btn btn-outline-info" onclick="seecookie()"
+							 style="display: none">
+							<input type="button" value="Validar" class="btn btn-outline-warning" onclick="validarall()">
+							<input type="button" id="VR" value="Ver resumen" class="btn btn-outline-success" onclick="introdatospedido(), resumenped()" disabled>
+							<input type="button" id="EPA" value="Eliminar pedido antiguo" class="btn btn-outline-danger" onclick="delecookie()"
+							 style="display: none">
+						</div>
+					</fieldset>
+				</div>
+				<div id="resumenpedido" class="">
+					<fieldset class="border rounded p-2 border-info p-3 ml-3 mr-3 shadow-lg mb-5 bg-white">
+						<legend class="w-auto text-success" align="center">
+							<h1><i class="fab fa-wpforms"></i> Resumen Pedido</h1>
+						</legend>
+						<p id="resumen"></p>
+					</fieldset>
+				</div>
+				<br>
+			</div>
+		</form>
+		<div id="snackbar" class="invisible">
+			<h1>Pedido realizado correctamente</h1>
+		</div>
+	</div>
+	<footer class="footer mt-auto py-3 bg-secondary">
+		<div class="container text-center">
+			<p class="text-white font-weight-bolder" id="footp">
+				Creado por: @Nubfragger
+				<input type="button" class="btn btn-outline-light" name="Infoadicional" value="Informacion adicional" onclick="HolaSoyElFooter()">
+			</p>
+		</div>
+	</footer>
+</body>
+
+</html>

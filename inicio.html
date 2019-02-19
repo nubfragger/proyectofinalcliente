@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Inicio</title>
+	<meta content="text/html; charset=utf-8" http-equiv="content-type" />
+	<meta name="author" content="Nicolas Viñals">
+	<meta name="description" content="Diseño Aplicacion Web : Diseño Web Entorno Cliente">
+	<link rel="shortcut icon" type="image/x-icon" href="imagenes/icono.ico" />
+	<!--ESTILOS BOOTSTRAP-->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+	 crossorigin="anonymous">
+	<!--SCRIPTS BOOTSTRAP-->
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+	 crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+	 crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+	 crossorigin="anonymous"></script>
+	<!--ICONOS-->
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ"
+	 crossorigin="anonymous">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<!--ESTILOS-->
+	<link rel="stylesheet" type="text/css" href="./css/header.css" />
+	<!--SCRIPTS-->
+	<script type="text/javascript" src="./js/inicio.js"></script>
+	<script type="text/javascript" src="./js/footer.js"></script>
+</head>
+
+<body>
+	<header>
+		<div class="card bg-dark text-black">
+			<img src="./imagenes/header.png" class="card-img h-50%" alt="...">
+			<div class="card-img-overlay">
+				<h1 class="card-title text-center font-weight-bold h1">Coffee Ozone</h1>
+			</div>
+		</div>
+		<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01"
+			 aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			<div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+				<ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+					<li class="nav-item active">
+						<a class="nav-link" href="./inicio.html"><i class="fas fa-home"></i> Inicio</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="./pedidos.html"><i class="fab fa-wpforms"></i> Pedidos</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="./usuarios.html"><i class="fas fa-users"></i> Usuarios</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="./acercade.html"><i class="fas fa-info"></i> Acerca de...</a>
+					</li>
+				</ul>
+			</div>
+		</nav>
+	</header>
+	<div id="cuerpo">
+		<div class="text-center mr-5 ml-5 mt-4 pr-5 pl-5">
+			<div id="carouselExampleIndicators" class="carousel slide mr-5 ml-5 pr-5 pl-5" data-ride="carousel">
+				<ol class="carousel-indicators">
+					<li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+					<li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+					<li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+					<li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
+				</ol>
+				<div class="carousel-inner">
+					<div class="carousel-item active">
+						<img src="./imagenes/carousel1.png" class="d-block w-100 rounded-pill" alt="...">
+					</div>
+					<div class="carousel-item">
+						<img src="./imagenes/carousel2.png" class="d-block w-100 rounded-pill" alt="...">
+					</div>
+					<div class="carousel-item">
+						<img src="./imagenes/Carousel3.png" class="d-block w-100 rounded-pill" alt="...">
+					</div>
+					<div class="carousel-item">
+						<img src="./imagenes/carousel4.png" class="d-block w-100 rounded-pill" alt="...">
+					</div>
+				</div>
+				<a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+					<span class="fas fa-arrow-left text-dark"></span>
+					<span class="sr-only">Previous</span>
+				</a>
+				<a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+					<span class="fas fa-arrow-right text-dark"></span>
+					<span class="sr-only">Next</span>
+				</a>
+			</div>
+		</div>
+		<div class="mt-5 mb-5 text-center">
+			<button class="btn btn-outline-primary" onmouseover="mostrarmenu('m1'), generarmenu1()">Menu1</button>
+			<button class="btn btn-outline-success" onmouseover="mostrarmenu('m2'), generarmenu2()">Menu2</button>
+			<button class="btn btn-outline-dark" onmouseover="mostrarmenu('m3'), generarmenu3()">Menu3</button>
+		</div>
+		<div style="display: grid; grid-template-columns: 33% 33% 33%">
+			<div id="m1" class="card m-4 border-info" style="visibility: hidden;">
+				<h3 class="text-center card-title" id="titulo1"></h3>
+				<ul id="lista1" class="card-text">
+				</ul>
+				<button type="button" class="close" aria-label="Close" onmouseout="ocultarmenu('m1')">
+					<span aria-hidden="true">&times;</span>
+				</button>
+			</div>
+			<div id="m2" class="card m-4 border-info" style="visibility: hidden;">
+				<h3 class="text-center card-title" id="titulo2"></h3>
+				<ul id="lista2" class="card-text">
+				</ul>
+				<button type="button" class="close" aria-label="Close" onmouseout="ocultarmenu('m2')">
+					<span aria-hidden="true">&times;</span>
+				</button>
+			</div>
+			<div id="m3" class="card m-4 border-info" style="visibility: hidden;">
+				<h3 class="text-center card-title" id="titulo3"></h3>
+				<ul id="lista3" class="card-text">
+				</ul>
+				<button type="button" class="close" aria-label="Close" onmouseout="ocultarmenu('m3')">
+					<span aria-hidden="true">&times;</span>
+				</button>
+			</div>
+		</div>
+	</div>
+	<footer class="footer mt-auto py-3 bg-secondary">
+		<div class="container text-center">
+			<p class="text-white font-weight-bolder" id="footp">
+				Creado por: @Nubfragger
+				<input type="button" class="btn btn-outline-light" name="Infoadicional" value="Informacion adicional" onclick="HolaSoyElFooter()">
+			</p>
+		</div>
+	</footer>
+</body>
+
+</html>
